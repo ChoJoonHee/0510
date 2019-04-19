@@ -7,6 +7,4 @@ gradle/
 gradlew*
 settings.gradle
 gradle.properties
-deployer.properties
 context.xml
-
