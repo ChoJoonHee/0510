@@ -4,6 +4,8 @@
 		http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	version="4.0" metadata-complete="false"><!-- WebServlet 쓰려면 false로 바꿔야함 -->
 
-
+<welcome-file-list>
+<welcome-file>main</welcome-file>
+</welcome-file-list>
 </web-app>
 		
