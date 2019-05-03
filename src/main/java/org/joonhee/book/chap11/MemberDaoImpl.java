@@ -1,4 +1,4 @@
-package org.joonhee.book.chap11.dao;
+package org.joonhee.book.chap11;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

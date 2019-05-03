@@ -1,4 +1,4 @@
-package org.joonhee.book.chap11.dao;
+package org.joonhee.book.chap11;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

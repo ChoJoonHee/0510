@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.joonhee.book.chap11.dao.DaoException;
-import org.joonhee.book.chap11.dao.Member;
-import org.joonhee.book.chap11.dao.MemberDao;
-import org.joonhee.book.chap11.dao.MemberDaoImpl;
-import org.joonhee.book.chap11.dao.JdbcTemplate;
-import org.joonhee.book.chap11.dao.RowMapper;
+import org.joonhee.book.chap11.DaoException;
+import org.joonhee.book.chap11.JdbcTemplate;
+import org.joonhee.book.chap11.Member;
+import org.joonhee.book.chap11.MemberDao;
+import org.joonhee.book.chap11.MemberDaoImpl;
+import org.joonhee.book.chap11.RowMapper;
 @WebServlet("/register/step3")
 public class RegisterStep3Servlet extends HttpServlet {
 
