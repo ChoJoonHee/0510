@@ -1,4 +1,4 @@
-package MemberController;
+package org.joonhee.book.chap11.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
