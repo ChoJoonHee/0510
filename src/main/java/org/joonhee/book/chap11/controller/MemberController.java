@@ -1,12 +1,5 @@
 package org.joonhee.book.chap11.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.joonhee.book.chap11.DaoException;
-import org.joonhee.book.chap11.Member;
-import org.joonhee.book.chap11.MemberDao;
-import org.joonhee.book.chap11.MemberDaoImpl;
-import org.joonhee.web.common.Controller;
 import java.io.IOException;
 import java.util.List;
 
@@ -16,15 +9,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.joonhee.book.chap11.dao.DaoException;
+import org.joonhee.book.chap11.dao.Member;
+import org.joonhee.book.chap11.dao.MemberDao;
+import org.joonhee.book.chap11.dao.MemberDaoImpl;
 import org.joonhee.web.common.Controller;
 import org.joonhee.web.common.RequestMapping;
 import org.joonhee.web.common.RequestMapping.RequestMethod;
 
-
+/**
+ * 회원 관련 컨트롤러
+ * 
+ * @author Jacob
+ */
 @Controller
-
 public class MemberController {
-	
+
 	Logger logger = LogManager.getLogger();
 
 	MemberDao memberDao = null;
@@ -33,7 +33,7 @@ public class MemberController {
 		memberDao = new MemberDaoImpl();
 	}
 
-	@RequestMapping(value = "/app/register/step2", method = RequestMethod.POST)
+	@RequestMapping(value = "/register/step2", method = RequestMethod.POST)
 	public void step2(HttpServletRequest request,
 			HttpServletResponse response) {
 		String agree = request.getParameter("agree");
@@ -46,7 +46,7 @@ public class MemberController {
 		}
 	}
 
-	@RequestMapping(value = "/app/register/step3", method = RequestMethod.POST)
+	@RequestMapping(value = "/register/step3", method = RequestMethod.POST)
 	public void step3(HttpServletRequest request,
 			HttpServletResponse response) {
 		String email = request.getParameter("email");
@@ -65,7 +65,7 @@ public class MemberController {
 		}
 	}
 
-	@RequestMapping(value = "/app/members", method = RequestMethod.GET)
+	@RequestMapping(value = "/members", method = RequestMethod.GET)
 	public void members(HttpServletRequest request,
 			HttpServletResponse response) {
 
