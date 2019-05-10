@@ -2,10 +2,32 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 		http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-	version="4.0" metadata-complete="false"><!-- WebServlet 쓰려면 false로 바꿔야함 -->
+	version="4.0" metadata-complete="true">
 
-<welcome-file-list>
-<welcome-file>main</welcome-file>
-</welcome-file-list>
+	<listener>
+		<listener-class>org.joonhee.web.common.ContextListener</listener-class>
+	</listener>
+
+	<context-param>
+		<param-name>basePackage</param-name>
+		<param-value>org.joonhee.book.chap11</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>simpleDispatcher</servlet-name>
+		<servlet-class>org.joonhee.web.common.SimpleDispatcherServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>simpleDispatcher</servlet-name>
+		<url-pattern>/app/*</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<location>/e/error.jsp</location>
+	</error-page>
+
+	<welcome-file-list>
+		<welcome-file>app/main</welcome-file>
+	</welcome-file-list>
 </web-app>
-		
